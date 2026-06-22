@@ -1,0 +1,308 @@
+:root {
+  --silver: #bebbbb;
+  --space-indigo: #2d3047;
+  --dark-cyan: #3c887e;
+  --toffee-brown: #9e6240;
+  --canary-yellow: #f7fe72;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8;
+  font-family: "Inter", sans-serif;
+  color: var(--space-indigo);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--space-indigo);
+}
+
+header p {
+  color: var(--dark-cyan);
+  margin-top: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+select,
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-family: inherit;
+}
+
+select {
+  background: white;
+  border: 1px solid var(--silver);
+}
+
+button {
+  background: var(--dark-cyan);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.product-card {
+  background: white;
+
+  border-left: 6px solid var(--dark-cyan);
+
+  border-radius: 12px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.05);
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-meta {
+  display: flex;
+  gap: 10px;
+}
+
+.category {
+  background: var(--canary-yellow);
+
+  color: var(--space-indigo);
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+
+  color: var(--toffee-brown);
+}
+
+.load-more {
+  display: block;
+  margin: 40px auto;
+}
+
+#nextBtn {
+  display: block;
+
+  margin: 30px auto;
+
+  background: var(--space-indigo);
+
+  color: white;
+
+  padding: 14px 24px;
+}
+
+#seed {
+    border: #4E938A;
+    border-width: 4px;
+    background: #c0c2c6;
+    padding: 4px;
+}
+
+#message {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: none;
+  font-weight: 500;
+}
+
+.success {
+  background: rgba(60, 136, 126, 0.15);
+  color: var(--dark-cyan);
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.08);
+  color: #c0392b;
+}
+
+input[type="number"] {
+  border: 1px solid var(--silver);
+  border-radius: 10px;
+  padding: 12px;
+  width: 120px;
+}
+
+#productCount {
+  margin-bottom: 16px;
+  color: var(--space-indigo);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 12px;
+  min-width: 180px;
+
+  border-left: 5px solid var(--dark-cyan);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  margin-top: 6px;
+  color: var(--space-indigo);
+}
+
+#message {
+  display: none;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.success {
+  background: rgba(60, 136, 126, 0.15);
+  color: var(--dark-cyan);
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.08);
+  color: #c0392b;
+}
+
+#seed {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="number"] {
+  border: 1px solid var(--silver);
+  border-radius: 10px;
+  padding: 12px;
+  width: 120px;
+  font-family: inherit;
+}
+
+.section-header {
+  margin-bottom: 14px;
+}
+
+#productCount {
+  color: var(--space-indigo);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.scroll-actions {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 999;
+}
+
+.scroll-actions button {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  font-size: 8px;
+  font-weight: 400;
+
+  background: var(--space-indigo);
+
+  color: white;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.15);
+}
+
+.scroll-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.page-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 12px 0;
+
+  color: var(--space-indigo);
+  font-weight: 600;
+}
+
+.page-divider::before,
+.page-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--silver);
+}
+
+.page-divider span {
+  background: #f8f8f8;
+  padding: 0 10px;
+}

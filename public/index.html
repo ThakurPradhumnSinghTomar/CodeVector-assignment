@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product Browser</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Product Browser</h1>
+        <p>
+          Browse 200,000+ products with cursor pagination and category filtering
+          <p class="sort-info">
+  Sorted by newest first 
+</p>
+        </p>
+      </header>
+
+      <div id="message"></div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Total Products</span>
+          <h2 id="dbCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+          <span>Showing</span>
+          <h2 id="shownCount">0</h2>
+        </div>
+      </div>
+
+      <section class="filters">
+        <select id="category">
+          <option value="">All Categories</option>
+          <option value="Books">Books</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Sports">Sports</option>
+          <option value="Home">Home</option>
+          <option value="Gaming">Gaming</option>
+          <option value="Health">Health</option>
+          <option value="Toys">Toys</option>
+        </select>
+
+        <button id="refreshBtn">Refresh</button>
+
+        <div id="seed">
+          <input
+            type="number"
+            id="seedCount"
+            value="1000"
+            min="1"
+            max="200000"
+            placeholder="Products"
+          />
+
+          <button id="seedBtn">Add Products</button>
+        </div>
+
+      </section>
+
+      <div class="section-header">
+        <h3 id="productCount">Products</h3>
+      </div>
+
+      <section id="products" class="products"></section>
+
+      <button id="nextBtn">Next Page →</button>
+    </div>
+
+    <div class="scroll-actions">
+      <button id="scrollTopBtn">↑ Top</button>
+
+      <button id="scrollBottomBtn">↓ Bottom</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
