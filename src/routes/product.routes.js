@@ -27,7 +27,7 @@ router.post("/seed", async (req, res) => {
     if (existingCount + count > 300000) {
       return res.status(400).json({
         success: false,
-        message: `Current products: ${existingCount}. Cannot exceed 200000 products.`,
+        message: `Current products: ${existingCount}. Cannot exceed 300000 products.`,
       });
     }
 
